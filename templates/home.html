@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FoodOnline</title>
+	<title>OnlineCafé</title>
 	<!-- Google Font Family Link Start -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
 	<!-- Google Font Family Link End -->
 
 	<!-- CSS -->
-	<link href="assets/css/iconmoon.css" rel="stylesheet">
-	<link href="assets/css/style.css" rel="stylesheet">
-	<link href="assets/css/cs-foodbakery-plugin.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link href="assets/css/bootstrap-slider.css" rel="stylesheet">
+	<link href="{% static '/css/iconmoon.css' %}" rel="stylesheet">
+	<link href="{% static '/css/style.css' %}" rel="stylesheet">
+	<link href="{% static '/cs-foodbakery-plugin.css' %}" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="{% static '/css/bootstrap-slider.css' %}" rel="stylesheet">
 	
 	<!-- JAVASCRIPT -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="assets/js/modernizr.js"></script>
-	<script src="assets/js/bootstrap.js"></script>
+	<script src="{% static '/js/modernizr.js' %}"></script>
+	<script src="{% static '/assets/js/bootstrap.js' %}"></script>
 
 	<style>
 		body, .main-section p, .mce-content-body p{
@@ -42,7 +42,7 @@
 							<div class="logo">
 								<figure>
 									<a href="index.html" class="light-logo">
-										<img src="assets/extra-images/main-logo.png" alt="FoodBakery">
+										<img src="{% static '/logo/logo.png' %}" alt="FoodBakery" style='width:200px'>
 									</a>
 								</figure>
 							</div>
@@ -116,7 +116,7 @@
 		<div class="main-section">
 			<!-- Home Pages Elements Strat -->
 			<!-- Main Search Start -->
-			<div class="page-section nopadding cs-nomargin" style="padding-top: 200px; padding-bottom: 150px; margin-bottom: 0px; background: url(assets/extra-images/bg-image1.jpg) no-repeat center / cover;">
+			<div class="page-section nopadding cs-nomargin" style="padding-top: 200px; padding-bottom: 150px; margin-bottom: 0px; background: url({% static '/extra-images/bg-image1.jpg' %}) no-repeat center / cover;">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -220,42 +220,42 @@
 								<ul>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/listing-logo18.png" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/listing-logo18.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-02.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/fb-restaurant-02.jpg' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-04.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/fb-restaurant-04.jpg' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-06.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/fb-restaurant-06.jpg' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/xlisting-logo03.png.pagespeed.ic_.aT-o9LinEJ.png" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/xlisting-logo03.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/listing-logo09.png" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/listing-logo09.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/listing-logo18.png" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/listing-logo18.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 									<li class="has-border">
 										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-09.png" class="attachment-full size-full wp-post-image" alt=""></a>
+											<a href="#"><img src="{% static '/extra-images/fb-restaurant-09.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
 										</figure>
 									</li>
 								</ul>
@@ -281,7 +281,7 @@
 									<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 										<div class="list-post featured">
 											<div class="img-holder">
-												<figure><a href="#"><img src="assets/extra-images/listing-logo18.png" class="img-thumb wp-post-image" alt=""></a></figure>
+												<figure><a href="#"><img src="{% static '/extra-images/listing-logo18.png' %}" class="img-thumb wp-post-image" alt=""></a></figure>
 												<span class="restaurant-status close">
 													<em class="bookmarkRibbon"></em>Close
 												</span>
@@ -311,7 +311,7 @@
 									<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 										<div class="list-post featured">
 											<div class="img-holder">
-												<figure><a href="#"><img src="assets/extra-images/listing-logo09.png" class="img-thumb wp-post-image" alt=""></a></figure>
+												<figure><a href="#"><img src="{% static '/extra-images/listing-logo09.png' %}" class="img-thumb wp-post-image" alt=""></a></figure>
 												<span class="restaurant-status open">
 													<em class="bookmarkRibbon"></em>open
 												</span>
@@ -381,7 +381,7 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="copyright-inner">
 								<div class="copy-right">
-									<p>© 2020 Foodbakery. All Rights Reserved. Developed By <a href="#">Rathan Kumar</a>
+									<p>© 2023 OnlineCafé. All Rights Reserved. Developed By <a href="https://stephensuyanka.com/">Stephen Suyanka</a>
 									</p>
 								</div>
 							</div>
@@ -394,8 +394,8 @@
 	</div>
 	
 	<!-- Modal Popup End -->
-	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/functions.js"></script>
+	<script src="{% static '/assets/js/scripts.js' %}"></script>
+	<script src="{% static '/assets/js/functions.js'%} "> </script>
 </body>
 
 </html>
