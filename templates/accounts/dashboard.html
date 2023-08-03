@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    Welcome {{ user.username | capfirst }}
+
+    {% include 'includes/_alerts.html' %}
+
+{% endblock content %}
