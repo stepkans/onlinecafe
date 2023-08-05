@@ -8,7 +8,10 @@ from django.contrib import messages, auth
 # Create your views here.
 
 def registerUser(request):
-    if request.method =='POST':
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in.!')
+        return redirect('dashboard')
+    elif request.method =='POST':
         # print(request.POST)
         form = MyUserForm(request.POST)
         if form.is_valid():
@@ -29,7 +32,7 @@ def registerUser(request):
             user.role = MyUser.CUSTOMER
             user.save()
             messages.success(request, "Your account has been registered successfully!")    
-            return redirect('registerUser')
+            return redirect('login')
         else:
             print(form.errors)    
     else:    
@@ -41,10 +44,13 @@ def registerUser(request):
     return render(request, 'accounts/registerUser.html', context)
 
 def registerVendor(request):
-    if request.method =='POST':
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in.!')
+        return redirect('dashboard')
+    elif request.method =='POST':
         form = MyUserForm(request.POST)
         v_form = VendorForm(request.POST, request.FILES)
-        if form.is_valid and v_form.is_valid:
+        if form.is_valid() and v_form.is_valid():
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             username = form.cleaned_data['username']
@@ -63,19 +69,23 @@ def registerVendor(request):
         else:
             print('Invalid form')  
             print(form.errors)  
+            print(v_form.errors)  
     else:
         form = MyUserForm()
         v_form = VendorForm()
 
     context = {
-        'form': 'form',
-        'v_form': 'v_form',
+        'form': form,
+        'v_form': v_form,
     }
     return render(request, 'accounts/registerVendor.html', context)  
 
 
 def login(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in.!')
+        return redirect('dashboard')
+    elif request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
         user = auth.authenticate(request, email=email, password=password)
