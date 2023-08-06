@@ -3,6 +3,7 @@
 {% block content %}
 
     Welcome {{ user.username | capfirst }}
+    <h3>This is a {{ user.get_role }}</h3>
 
     {% include 'includes/_alerts.html' %}
 
