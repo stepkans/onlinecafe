@@ -65,7 +65,7 @@ def registerVendor(request):
             vendor.user_profile = user_profile
             vendor.save()
             messages.success(request, "Your account has been registered successfully! Please wait for the approval.")   
-            return redirect('registerVendor')
+            return redirect('login')
         else:
             print('Invalid form')  
             print(form.errors)  
